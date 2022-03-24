@@ -263,13 +263,13 @@ idm:
     <tr>
       <td>user_id</td>
       <td><code>INT</code></td>
-      <td><code>NOT NULL</code>
+      <td><code>NOT NULL</code> <code>PRIMARY KEY</code></td>
     </tr>
     <tr></tr>
     <tr>
       <td>role_id</td>
       <td><code>INT</code></td>
-      <td><code>NOT NULL</code></td>
+      <td><code>NOT NULL</code> <code>PRIMARY KEY</code></td>
     </tr>
     <tr>
       <th colspan="3" align="left">Constraints</th>
