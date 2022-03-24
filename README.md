@@ -62,7 +62,7 @@ idm:
     </tr>
     <tr></tr>
     <tr>
-      <td>name</td>
+      <td>value</td>
       <td><code>VARCHAR(32)</code></td>
       <td><code>NOT NULL</code></td>
     </tr>
@@ -149,7 +149,7 @@ idm:
       <th align="left">Attributes</th>
     </tr>
     <tr>
-      <td>user_id</td>
+      <td>id</td>
       <td><code>INT</code></td>
       <td><code>NOT NULL</code> <code>PRIMARY KEY</code> <code>AUTO_INCREMENT</code></td>
     </tr>
@@ -263,7 +263,7 @@ idm:
     <tr>
       <td>user_id</td>
       <td><code>INT</code></td>
-      <td><code>NOT NULL</code> <code>PRIMARY KEY</code></td>
+      <td><code>NOT NULL</code>
     </tr>
     <tr></tr>
     <tr>
@@ -275,11 +275,15 @@ idm:
       <th colspan="3" align="left">Constraints</th>
     </tr>
     <tr>
-      <td colspan="3"><code>FOREIGN KEY</code> <code>(userId)</code> <code>REFERENCES</code> <code>idm.user (id)</code> <code>ON UPDATE CASCADE</code> <code>ON DELETE CASCADE</code></td>
+      <td colspan="3"><code>PRIMARY KEY</code> <code>(user_id, role_id)</code></td>
     </tr>
     <tr></tr>
     <tr>
-      <td colspan="3"><code>FOREIGN KEY</code> <code>(roleId)</code> <code>REFERENCES</code> <code>idm.role (id)</code> <code>ON UPDATE CASCADE</code> <code>ON DELETE RESTRICT</code></td>
+      <td colspan="3"><code>FOREIGN KEY</code> <code>(user_id)</code> <code>REFERENCES</code> <code>idm.user (id)</code> <code>ON UPDATE CASCADE</code> <code>ON DELETE CASCADE</code></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td colspan="3"><code>FOREIGN KEY</code> <code>(role_id)</code> <code>REFERENCES</code> <code>idm.role (id)</code> <code>ON UPDATE CASCADE</code> <code>ON DELETE RESTRICT</code></td>
     </tr>
   </tbody>
 </table>
