@@ -340,7 +340,7 @@ POST /register
     </tr>
     <tr>
       <td colspan="2" align="left"><pre lang="yml">
-email: Integer
+email: String
 password: char[]</pre></td>
       <td align="left"><pre lang="json">
 {
@@ -473,7 +473,7 @@ POST /login
     </tr>
     <tr>
       <td colspan="2" align="left"><pre lang="yml">
-email: Integer
+email: String
 password: char[]</pre></td>
       <td align="left"><pre lang="json">
 {
