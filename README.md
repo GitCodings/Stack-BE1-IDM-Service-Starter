@@ -1,6 +1,6 @@
 # CS122B Backend 1 - The IDM Service
 
-#### [Config](#config)
+#### [Application Settings](#application-settings)
 
 #### [Database](#database)
 
@@ -10,7 +10,10 @@
  3. [POST: Refresh](#refresh)
  4. [POST: Authenticate](#authenticate)
 
-## Config
+## Application Settings
+
+This file is already provided for you and configure Spring Boot's settings
+
 ##### `application.yml`
 
 ```yml
