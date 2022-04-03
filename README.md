@@ -327,7 +327,7 @@ All <code>Result</code> objects are avaible as static constants inside of the <c
 These can be used rather than creating your own.
 
 ## Register
-Allows users to create login details given a valid email and password. Password must be hashed and salted with both values being stored in the <code>idm.user</code> table. The user is given no roles by default.
+Allows users to create login details given a valid email and password. Password must be hashed and salted with both values being stored in the <code>idm.user</code> table. The user is given no roles, as well as being assigned the `user_status` of `ACTIVE`, by default.
 
 ### Path
 ```http 
