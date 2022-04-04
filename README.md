@@ -449,7 +449,7 @@ An <code>accessToken</code> is built as follows:
     1. <code>subject</code> of the user's email
     2. <code>expirationTime</code> of the currentTime + accessTokenExpireTime found in the config
     3. <code>issueTime</code> the currentTime
-    4. <code>claim(JWTManager.CLAIM_ROLES)</code> of the user's roles
+    4. <code>claim(JWTManager.CLAIM_ROLES)</code> of the user's roles (list of roles in **ALL CAPS**)
     5. <code>claim(JWTManager.CLAIM_ID)</code> of the user's id
 2. Build a <code>JWSHeader</code> with the <code>JWTManager.JWS_ALGORITHM</code> and the following:
     1. <code>keyID</code> of the ecKeyId found in your instance of <code>JWTManager</code>
