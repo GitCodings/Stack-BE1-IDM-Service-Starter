@@ -3,6 +3,9 @@
 #### [Application Settings](#application-settings)
 
 #### [Database](#database)
+ - [Schemas](#schemas)
+ - [Tables](#tables)
+ - [Initial Data](#initial-data)
 
 #### [Endpoints](#endpoints)
  1. [POST: Register](#register)
@@ -45,6 +48,18 @@ idm:
 ```
 
 ## Database
+
+### Schemas
+
+<table>
+  <thead>
+    <tr>
+      <th align="left" width="1100">🗄 idm</th>
+    </tr>
+  </thead>
+</table>
+
+### Tables
 
 <table>
   <thead>
@@ -291,6 +306,10 @@ idm:
     </tr>
   </tbody>
 </table>
+
+### Initial Data
+
+All the data to initialize your database is found in the `db` folder here: [db folder](/db)
 
 # Endpoints
 
