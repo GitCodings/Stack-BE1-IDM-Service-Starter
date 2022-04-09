@@ -486,7 +486,7 @@ An `accessToken` is built as follows:
 5. Serialize by calling `signedJWT.serialize()`
 
 ### RefreshToken
-A `refreshToken` is created by creating an instance of the `RefreshToken` class that is provided for you and having the `token` attribute be set to a random UUID (in string format). You can get a random UUID by using: `UUID.randomUUID()` and you can get the string formated UUID by calling the `toString()` function on the UUID.
+A `refreshToken` is created by creating an instance of the `RefreshToken` class that is provided for you and having the `token` attribute be set to a random UUID (in string format). You can get a random UUID by using: `UUID.randomUUID()` and you can get the string formated UUID by calling the `toString()` function on the UUID. The token will have a `token_status` of `ACTIVE`, by default.
  
 Remember this `refreshToken` must be stored in the `db` to be able to refrence later
 
