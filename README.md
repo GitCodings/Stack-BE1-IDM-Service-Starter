@@ -353,7 +353,7 @@ These can be used rather than creating your own.
 # Endpoints
  
 ## Register
-Allows users to create login details given a valid email and password. Password must be hashed and salted with both values being stored in the <code>idm.user</code> table. The user is given no roles, as well as being assigned the `user_status` of `ACTIVE`, by default.
+Allows users to create login details given a valid email and password. Password must be hashed and salted with both values being stored in the `idm.user` table. The user is given no roles, as well as being assigned the `user_status` of `ACTIVE`, by default.
 
 ### Path
 ```http 
@@ -467,26 +467,26 @@ result: Result
 </table>
       
 ## Login
-Allows users to login with credentials created in the <code>/register</code> endpoint. Returns both a <code>accessToken</code> and a <code>refreshToken</code> (with the <code>refreshToken</code> being stored in the <code>idm.refresh_token</code> table). Both tokens expiration dates are determined by the values supplied in the <code>application.yml</code> file. 
+Allows users to login with credentials created in the `/register` endpoint. Returns both a `accessToken` and a `refreshToken` (with the `refreshToken` being stored in the `idm.refresh_token` table). Both tokens expiration dates are determined by the values supplied in the `application.yml` file. 
 
 ### AccessToken
-An <code>accessToken</code> is built as follows:
-1. Build a <code>JWTClaimsSet</code> with the following claims:
-    1. <code>subject</code> of the user's email
-    2. <code>expirationTime</code> of the currentTime + accessTokenExpireTime found in the config
-    3. <code>issueTime</code> the currentTime
-    4. <code>claim(JWTManager.CLAIM_ROLES)</code> of the user's roles (user a list of the provided Role enum)
-    5. <code>claim(JWTManager.CLAIM_ID)</code> of the user's id
-2. Build a <code>JWSHeader</code> with the <code>JWTManager.JWS_ALGORITHM</code> and the following:
-    1. <code>keyID</code> of the ecKeyId found in your instance of <code>JWTManager</code>
-        - found by calling <code>manager.getEcKey().getKeyID()</code>
-    2. <code>type</code> of <code>JWTManager.JWS_TYPE</code>
-3. Build a <code>SignedJWT</code> with your created <code>JWTClaimsSet</code> and <code>JWSHeader</code>
-4. Sign by using calling <code>signedJWT.sign(jwtManager.getSigner())</code>
-5. Serialize by calling <code>signedJWT.serialize()</code>
+An `accessToken` is built as follows:
+1. Build a `JWTClaimsSet` with the following claims:
+    1. `subject` of the user's email
+    2. `expirationTime` of the currentTime + accessTokenExpireTime found in the config
+    3. `issueTime` the currentTime
+    4. `claim(JWTManager.CLAIM_ROLES)` of the user's roles (user a list of the provided Role enum)
+    5. `claim(JWTManager.CLAIM_ID)` of the user's id
+2. Build a `JWSHeader` with the `JWTManager.JWS_ALGORITHM` and the following:
+    1. `keyID` of the ecKeyId found in your instance of `JWTManager`
+        - found by calling `manager.getEcKey().getKeyID()`
+    2. `type` of `JWTManager.JWS_TYPE`
+3. Build a `SignedJWT` with your created `JWTClaimsSet` and `JWSHeader`
+4. Sign by using calling `signedJWT.sign(jwtManager.getSigner())`
+5. Serialize by calling `signedJWT.serialize()`
 
 ### RefreshToken
-A <code>refreshToken</code> is created by calling <code>UUID.randomUUID()</code>
+A `refreshToken` is created by creating an instance of the `RefreshToken` class that is provided for you and having the `token` attribute be set to a random UUID (in string format). You can get a random UUID by using: `UUID.randomUUID()` and you can get the string formated UUID by calling the `toString()` function on the UUID.
 
 ### Path
 ```http 
@@ -623,10 +623,10 @@ refreshToken: String (nullable)</pre></td>
     
       
 ## Refresh
-Creates a new <code>accessToken</code> for the user given a valid and non-expired <code>refreshToken</code> that belongs to the user.
+Creates a new `accessToken` for the user given a valid and non-expired `refreshToken` that belongs to the user.
 
 ### Flowchart
-If the <code>refreshToken</code> passes basic validation ensure it follows this [Flow Chart](refresh_token_flowchart.svg)
+If the `refreshToken` passes basic validation ensure it follows this [Flow Chart](refresh_token_flowchart.svg)
 
 ### Path
 ```http 
@@ -739,12 +739,12 @@ refreshToken: String (nullable)</pre></td>
     
       
 ## Authenticate
-Authenticates a user's <code>accessToken</code> to ensure it is both valid and non-expired.
+Authenticates a user's `accessToken` to ensure it is both valid and non-expired.
 
 ### Verification
-An <code>accessToken</code> can be verified in three steps:
-1. Verifying that the token is valid and issued by us by calling <code>jwt.verify(jwtManager.getVerifier())</code>
-2. Checking that the claims are consistent with what we expect by calling <code>jwtManager.getJwtProcessor().process(jwt, null)</code>
+An `accessToken` can be verified in three steps:
+1. Verifying that the token is valid and issued by us by calling `jwt.verify(jwtManager.getVerifier())`
+2. Checking that the claims are consistent with what we expect by calling `jwtManager.getJwtProcessor().process(jwt, null)`
 3. Manually checking that the expireTime of the token has not passed.
 
 ### Path
