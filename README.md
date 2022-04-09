@@ -319,8 +319,8 @@ All the data to initialize your database is found in the `db` folder here: [db f
 # Notes
 
 ### Order of Validation
-All <code>❗ 400: Bad Request</code> Results must be checked first, and returned before any other action is made. \
-The order of the checks within <code>❗ 400: Bad Request</code> is not tested as each Result is tested individually.
+All `❗ 400: Bad Request` Results must be checked first, and returned before any other action is made. \
+The order of the checks within `❗ 400: Bad Request` is not tested as each Result is tested individually.
 
 ### JsonInclude
 In the case of non-successful results, where values are expected, the values should not be included, for example.
@@ -333,7 +333,7 @@ In the case of non-successful results, where values are expected, the values sho
    "value": null 
 }
 ```
-the <code>value</code> key should not be included: 
+the `value` key should not be included: 
 ```json
 {
    "result": {
@@ -342,12 +342,12 @@ the <code>value</code> key should not be included:
    }
 }
 ```
-This is done by insuring that all <code>null</code> values are dropped by either:
-- Having your Model extend <code>ResponseModel<Model></code>, or
-- Putting the <code>@JsonInclude(JsonInclude.Include.NON_NULL)</code> on your Model class
+This is done by insuring that all `null` values are dropped by either:
+- Having your Model extend `ResponseModel<Model>`, or
+- Putting the `@JsonInclude(JsonInclude.Include.NON_NULL)` on your Model class
   
 ### Result
-All <code>Result</code> objects are avaible as static constants inside of the <code>com.github.klefstad_teaching.cs122b.core.result.IDMResults</code> class.
+All `Result` objects are available as static constants inside of the `com.github.klefstad_teaching.cs122b.core.result.IDMResults` class.
 These can be used rather than creating your own.
 
 # Endpoints
@@ -487,6 +487,8 @@ An `accessToken` is built as follows:
 
 ### RefreshToken
 A `refreshToken` is created by creating an instance of the `RefreshToken` class that is provided for you and having the `token` attribute be set to a random UUID (in string format). You can get a random UUID by using: `UUID.randomUUID()` and you can get the string formated UUID by calling the `toString()` function on the UUID.
+ 
+Remember this `refreshToken` must be stored in the `db` to be able to refrence later
 
 ### Path
 ```http 
