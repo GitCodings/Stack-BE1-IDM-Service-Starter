@@ -7,6 +7,11 @@
  - [Tables](#tables)
  - [Initial Data](#initial-data)
 
+#### [Notes](#notes)
+ - [Order of Validation](#order-of-validation)
+ - [JsonInclude](#jsoninclude)
+ - [Result](#result)
+
 #### [Endpoints](#endpoints)
  1. [POST: Register](#register)
  2. [POST: Login](#login)
@@ -311,7 +316,7 @@ idm:
 
 All the data to initialize your database is found in the `db` folder here: [db folder](/db)
 
-# Endpoints
+# Notes
 
 ### Order of Validation
 All <code>❗ 400: Bad Request</code> Results must be checked first, and returned before any other action is made. \
@@ -345,6 +350,8 @@ This is done by insuring that all <code>null</code> values are dropped by either
 All <code>Result</code> objects are avaible as static constants inside of the <code>com.github.klefstad_teaching.cs122b.core.result.IDMResults</code> class.
 These can be used rather than creating your own.
 
+# Endpoints
+ 
 ## Register
 Allows users to create login details given a valid email and password. Password must be hashed and salted with both values being stored in the <code>idm.user</code> table. The user is given no roles, as well as being assigned the `user_status` of `ACTIVE`, by default.
 
