@@ -1,6 +1,9 @@
 # CS122B Backend 1 - The IDM Service
 
-#### [Application Settings](#application-settings)
+#### [Application](#application)
+ - [application.yml](#applicationyml)
+ - [Resources](#Resources)
+ - [Tests](#Tests)
 
 #### [Database](#database)
  - [Schemas](#schemas)
@@ -18,12 +21,14 @@
  3. [POST: Refresh](#refresh)
  4. [POST: Authenticate](#authenticate)
 
-## Application Settings
+## Application
+
+### application.yml
 
 Spring Boot can has a large number of settings that can be set with a file called `application.yml`. \
 This file is already provided for you and is placed here for reference.
 
-##### `application.yml`
+**This file should NEVER be modified**
 
 ```yml
 spring:
@@ -51,6 +56,21 @@ idm:
   refresh-token-expire: 12h
   max-refresh-token-life-time: 30d
 ```
+
+### Resources
+
+There are two folders in this project that contain resources, and application settings
+
+**These file should NEVER be modified**
+
+ 1. [Main Resources](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/tree/main/src/main/resources)
+ 1. [Test Resources](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/tree/main/src/test/resources)
+
+### Tests
+
+There is a Single class that containt all of our test cases: [IDMServiceTest](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/blob/main/src/test/java/com/github/klefstad_teaching/cs122b/idm/IDMServiceTest.java)
+
+**This file should NEVER be modified**
 
 ## Database
 
