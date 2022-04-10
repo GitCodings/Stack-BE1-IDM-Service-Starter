@@ -25,37 +25,12 @@
 
 ### application.yml
 
-Spring Boot can has a large number of settings that can be set with a file called `application.yml`. \
-This file is already provided for you and is placed here for reference.
+Spring Boot can has a large number of settings that can be set with a file called `application.yml`.
 
-**This file should NEVER be modified**
+**These file should NEVER be modified**
 
-```yml
-spring:
-  application:
-    name: IdmService
-  datasource:
-    url: jdbc:mysql://localhost:3306
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-
-server:
-  address: 0.0.0.0
-  port: 8081
-  error: # These settings are for debugging
-    include-exception: true
-    include-message: always
-
-logging:
-  file:
-    name: ./IdmService.log
-
-idm:
-  key-file-name: ec-key.json
-  access-token-expire: 30m
-  refresh-token-expire: 12h
-  max-refresh-token-life-time: 30d
-```
+ 1. [Main application.yml](/src/main/resources/application.yml)
+ 2. [Test application.yml](/src/test/resources/application.yml)
 
 ### Resources
 
@@ -63,14 +38,16 @@ There are two folders in this project that contain resources, and application se
 
 **These file should NEVER be modified**
 
- 1. [Main Resources](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/tree/main/src/main/resources)
- 1. [Test Resources](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/tree/main/src/test/resources)
+ 1. [Main Resources](/src/main/resources)
+ 2. [Test Resources](/src/test/resources)
 
 ### Tests
 
-There is a Single class that containt all of our test cases: [IDMServiceTest](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/blob/main/src/test/java/com/github/klefstad_teaching/cs122b/idm/IDMServiceTest.java)
+There is a Single class that containt all of our test cases: 
 
 **This file should NEVER be modified**
+
+ 1. [IDMServiceTest](/src/test/java/com/github/klefstad_teaching/cs122b/idm/IDMServiceTest.java)
 
 ## Database
 
