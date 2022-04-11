@@ -476,6 +476,7 @@ An `accessToken` is built as follows:
     2. `expirationTime` of the currentTime + accessTokenExpireTime found in the config
     3. `issueTime` the currentTime
     4. `claim(JWTManager.CLAIM_ROLES)` of the user's roles (user a list of the provided Role enum)
+        - If the user has no roles then just place a empty list here. The JWT Requires that there is a value for `JWTManager.CLAIM_ROLES`
     5. `claim(JWTManager.CLAIM_ID)` of the user's id
 2. Build a `JWSHeader` with the `JWTManager.JWS_ALGORITHM` and the following:
     1. `keyID` of the ecKeyId found in your instance of `JWTManager`
