@@ -473,7 +473,7 @@ Allows users to login with credentials created in the `/register` endpoint. Retu
 An `accessToken` is built as follows:
 1. Build a `JWTClaimsSet` with the following claims:
     1. `subject` of the user's email
-    2. `expirationTime` of the currentTime + accessTokenExpireTime found in the config
+    2. `expirationTime` of the "Current Time" (use Instant for this) + accessTokenExpireTime found in the config
     3. `issueTime` the currentTime
     4. `claim(JWTManager.CLAIM_ROLES)` of the user's roles (user a list of the provided Role enum)
         - If the user has no roles then just place a empty list here. The JWT Requires that there is a value for `JWTManager.CLAIM_ROLES`
