@@ -15,6 +15,7 @@
  - [Order of Validation](#order-of-validation)
  - [JsonInclude](#jsoninclude)
  - [Result](#result)
+ - [DB Constants](#db-constants)
 
 #### [Endpoints](#endpoints)
  1. [POST: Register](#register)
@@ -349,6 +350,9 @@ This is done by insuring that all `null` values are dropped by either:
 ### Result
 All `Result` objects are available as static constants inside of the `com.github.klefstad_teaching.cs122b.core.result.IDMResults` class.
 These can be used rather than creating your own.
+
+### DB Constants
+We have provided some `Enum` classes in [The Type Module](/src/main/java/com/github/klefstad_teaching/cs122b/idm/repo/entity/type) to help manage constants in the DB, such as `idm.role`, `idm.user_status`, and `idm.token_status`. These are to help translate between `id` in the table and type the `id` corresponds with and make the code more readable.
 
 # Endpoints
  
