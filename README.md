@@ -754,6 +754,8 @@ refreshToken: String (nullable)</pre></td>
 ## Authenticate
 Authenticates a user's `accessToken` to ensure it is both valid and non-expired.
 
+We are given the JWT in serialized format, so we will need to use `SignedJWT.parse()` in order to turn it back into `SignedJWT`
+
 ### Verification
 An `accessToken` can be verified in three steps:
 1. Verifying that the token is valid and issued by us by calling `jwt.verify(jwtManager.getVerifier())`
