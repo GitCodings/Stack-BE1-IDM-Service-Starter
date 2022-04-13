@@ -628,6 +628,12 @@ refreshToken: String (nullable)</pre></td>
 ## Refresh
 Creates a new `accessToken` for the user given a valid and non-expired `refreshToken` that belongs to the user.
 
+To validate if a `UUID` has the correct format we can use `UUID.fromString(refreshToken)`. If the `UUID` has an invalid format this will throw an exception that you can catch to throw the correct `Result` to the user.
+
+When we are given a `refreshToken` (this corrosponds to the `token` attribute in `idm.refreshToken`) in this endpoint we need to retrieve all the addition traits of the token (`user_id`, `token_status_id`, `expire_time`, `max_life_time`) from the database. 
+
+Anytime we update the RefreshToken's attributes we must update it with the DB, and anytime we create a new RefreshToken we must also insert it into the DB.
+
 ### Flowchart
 If the `refreshToken` passes basic validation ensure it follows this [Flow Chart](refresh_token_flowchart.svg)
 
