@@ -587,7 +587,7 @@ refreshToken: String (nullable)</pre></td>
     <tr>
       <td><code>❗ 403: Forbidden</code></td>
       <td>1022</td>
-      <td>Passwords do not match</td>
+      <td>Invalid credentials</td>
     </tr>
     <tr></tr>
     <tr>
