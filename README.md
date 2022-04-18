@@ -16,6 +16,7 @@
  - [JsonInclude](#jsoninclude)
  - [Result](#result)
  - [DB Constants](#db-constants)
+ - [Setting Expire Times](#setting-expire-times)
 
 #### [Endpoints](#endpoints)
  1. [POST: Register](#register)
@@ -353,6 +354,12 @@ These can be used rather than creating your own.
 
 ### DB Constants
 We have provided some `Enum` classes in [The Type Module](/src/main/java/com/github/klefstad_teaching/cs122b/idm/repo/entity/type) to help manage constants in the DB, such as `idm.role`, `idm.user_status`, and `idm.token_status`. These are to help translate between `id` in the table and type the `id` corresponds with and make the code more readable.
+
+### Setting Expire Times
+In our [IDMServiceConfig](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/blob/main/src/main/java/com/github/klefstad_teaching/cs122b/idm/config/IDMServiceConfig.java) we are given `Duration` for each of the expire types. When we are setting our expire time's in our AccessToken and RefreshToken we create a `Instant` that represents the time and date at which they expire.
+
+We do this by calling `Instant.now().plus(duration)`. More information on Instant and Duration here: [Activty 2](https://github.com/klefstad-teaching/CS122B-A2-Security#instant-and-duration)
+
 
 # Endpoints
  
