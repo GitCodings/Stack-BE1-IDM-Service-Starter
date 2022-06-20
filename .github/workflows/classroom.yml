@@ -30,7 +30,7 @@ jobs:
       - name: Setup DB
         run: |
           mysql.server start;
-          mysql -uroot < db.sql;
+          mysql -uroot < db/schema.sql;
           mysql -uroot < db/idm_token_status.sql;
           mysql -uroot < db/idm_user_status.sql;
       - name: Autograder
