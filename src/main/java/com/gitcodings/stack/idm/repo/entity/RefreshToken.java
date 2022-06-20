@@ -1,10 +1,7 @@
-package com.github.klefstad_teaching.cs122b.idm.repo.entity;
+package com.gitcodings.stack.idm.repo.entity;
 
-import com.github.klefstad_teaching.cs122b.idm.repo.entity.type.TokenStatus;
-import org.springframework.jdbc.core.RowMapper;
+import com.gitcodings.stack.idm.repo.entity.type.TokenStatus;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.Instant;
 
 public class RefreshToken

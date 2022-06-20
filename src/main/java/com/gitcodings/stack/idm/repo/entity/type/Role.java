@@ -1,4 +1,4 @@
-package com.github.klefstad_teaching.cs122b.idm.repo.entity.type;
+package com.gitcodings.stack.idm.repo.entity.type;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

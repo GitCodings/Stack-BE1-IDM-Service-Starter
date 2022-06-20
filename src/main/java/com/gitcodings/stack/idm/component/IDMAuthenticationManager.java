@@ -1,8 +1,8 @@
-package com.github.klefstad_teaching.cs122b.idm.component;
+package com.gitcodings.stack.idm.component;
 
-import com.github.klefstad_teaching.cs122b.idm.repo.IDMRepo;
-import com.github.klefstad_teaching.cs122b.idm.repo.entity.RefreshToken;
-import com.github.klefstad_teaching.cs122b.idm.repo.entity.User;
+import com.gitcodings.stack.idm.repo.entity.RefreshToken;
+import com.gitcodings.stack.idm.repo.entity.User;
+import com.gitcodings.stack.idm.repo.IDMRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

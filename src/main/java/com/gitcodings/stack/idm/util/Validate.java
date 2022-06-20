@@ -1,4 +1,4 @@
-package com.github.klefstad_teaching.cs122b.idm.util;
+package com.gitcodings.stack.idm.util;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.github.klefstad_teaching.cs122b.idm.repo;
+package com.gitcodings.stack.idm.repo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;

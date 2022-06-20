@@ -1,9 +1,9 @@
-package com.github.klefstad_teaching.cs122b.idm.component;
+package com.gitcodings.stack.idm.component;
 
-import com.github.klefstad_teaching.cs122b.core.security.JWTManager;
-import com.github.klefstad_teaching.cs122b.idm.config.IDMServiceConfig;
-import com.github.klefstad_teaching.cs122b.idm.repo.entity.RefreshToken;
-import com.github.klefstad_teaching.cs122b.idm.repo.entity.User;
+import com.gitcodings.stack.idm.config.IDMServiceConfig;
+import com.gitcodings.stack.idm.repo.entity.RefreshToken;
+import com.gitcodings.stack.idm.repo.entity.User;
+import com.gitcodings.stack.core.security.JWTManager;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.proc.BadJOSEException;
 import com.nimbusds.jwt.JWTClaimsSet;

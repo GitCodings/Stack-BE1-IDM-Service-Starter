@@ -1,8 +1,8 @@
-package com.github.klefstad_teaching.cs122b.idm.rest;
+package com.gitcodings.stack.idm.rest;
 
-import com.github.klefstad_teaching.cs122b.idm.component.IDMAuthenticationManager;
-import com.github.klefstad_teaching.cs122b.idm.component.IDMJwtManager;
-import com.github.klefstad_teaching.cs122b.idm.util.Validate;
+import com.gitcodings.stack.idm.component.IDMAuthenticationManager;
+import com.gitcodings.stack.idm.component.IDMJwtManager;
+import com.gitcodings.stack.idm.util.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
