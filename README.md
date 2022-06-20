@@ -1,4 +1,4 @@
-# CS122B Backend 1 - The IDM Service
+# Stack Backend 1 - The IDM Service
 
 #### [Application](#application)
  - [pom.xml](#pomxml)
@@ -52,7 +52,7 @@ There are two folders in this project that contain resources, and application se
 
 There is a Single class that contain all of our test cases: 
 
- - [IDMServiceTest](/src/test/java/com/github/klefstad_teaching/cs122b/idm/IDMServiceTest.java)
+ - [IDMServiceTest](/src/test/java/com/gitcodings/stack/idm/IDMServiceTest.java)
 
 ## Database
 
@@ -353,12 +353,12 @@ All `Result` objects are available as static constants inside of the `com.gitcod
 These can be used rather than creating your own.
 
 ### DB Constants
-We have provided some `Enum` classes in [The Type Module](/com/gitcodings/stack/idm/repo/entity/type) to help manage constants in the DB, such as `idm.role`, `idm.user_status`, and `idm.token_status`. These are to help translate between `id` in the table and type the `id` corresponds with and make the code more readable.
+We have provided some `Enum` classes in [The Type Module](/src/main/java/com/gitcodings/stack/idm/repo/entity/type) to help manage constants in the DB, such as `idm.role`, `idm.user_status`, and `idm.token_status`. These are to help translate between `id` in the table and type the `id` corresponds with and make the code more readable.
 
 ### Setting Expire Times
-In our [IDMServiceConfig](https://github.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/blob/main/src/main/java/com/github/klefstad_teaching/cs122b/idm/config/IDMServiceConfig.java) we are given `Duration` for each of the expire types. When we are setting our expire time's in our AccessToken and RefreshToken we create a `Instant` that represents the time and date at which they expire.
+In our [IDMServiceConfig](/src/main/java/com/gitcodings/stack/idm/config/IDMServiceConfig.java) we are given `Duration` for each of the expire types. When we are setting our expire time's in our AccessToken and RefreshToken we create a `Instant` that represents the time and date at which they expire.
 
-We do this by calling `Instant.now().plus(duration)`. More information on Instant and Duration here: [Activty 2](https://github.com/klefstad-teaching/CS122B-A2-Security#instant-and-duration)
+We do this by calling `Instant.now().plus(duration)`. More information on Instant and Duration here: [Activty 2](https://github.com/GitCodings/Stack-A2-Security#instant-and-duration)
 
 
 # Endpoints

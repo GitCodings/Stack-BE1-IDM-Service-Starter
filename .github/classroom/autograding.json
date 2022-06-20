@@ -1,14 +1,14 @@
 {
   "tests": [
     {
-      "name": "Environment setup",
+      "name": "applicationLoads",
       "setup": "",
       "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=\"\" -Dtest=IDMServiceTest#applicationLoads test",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerSuccessMinPassword",
@@ -18,7 +18,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerSuccessMaxPassword",
@@ -28,7 +28,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerSuccessMinEmail",
@@ -38,7 +38,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerSuccessMaxEmail",
@@ -48,7 +48,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerPasswordTooShort",
@@ -58,7 +58,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerPasswordTooLong",
@@ -68,7 +68,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerPasswordMissingNumber",
@@ -78,7 +78,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerPasswordMissingUpperCase",
@@ -88,7 +88,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerPasswordMissingLowerCase",
@@ -98,7 +98,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerEmailTooShort",
@@ -108,7 +108,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerEmailTooLong",
@@ -118,7 +118,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerEmailNotValid",
@@ -128,7 +128,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "registerAlreadyExists",
@@ -138,7 +138,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginSuccessMinPassword",
@@ -148,7 +148,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginSuccessMaxPassword",
@@ -158,7 +158,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginSuccessMinEmail",
@@ -168,7 +168,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginSuccessMaxEmail",
@@ -178,7 +178,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginPasswordTooShort",
@@ -188,7 +188,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginPasswordTooLong",
@@ -198,7 +198,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginPasswordMissingNumber",
@@ -208,7 +208,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginPasswordMissingUpperCase",
@@ -218,7 +218,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginPasswordMissingLowerCase",
@@ -228,7 +228,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginEmailTooShort",
@@ -238,7 +238,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginEmailTooLong",
@@ -248,7 +248,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginEmailNotValid",
@@ -258,7 +258,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginDoesntExist",
@@ -268,7 +268,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginBannedAccount",
@@ -278,7 +278,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginLockedAccount",
@@ -288,7 +288,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
     },
     {
       "name": "loginWrongPassword",
@@ -298,7 +298,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshActiveToken",
@@ -308,7 +308,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshExpiredToken",
@@ -318,7 +318,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshRevokedToken",
@@ -328,7 +328,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshBeforeExpire",
@@ -338,7 +338,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshAfterExpire",
@@ -348,7 +348,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshAfterExpireIsExtended",
@@ -358,7 +358,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshAfterMaxExpire",
@@ -368,7 +368,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshTokenInvalidLength",
@@ -378,7 +378,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "refreshTokenInvalidFormat",
@@ -388,7 +388,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "authenticateActiveToken",
@@ -398,7 +398,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "authenticateExpiredToken",
@@ -408,7 +408,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "authenticateInvalidTokenKey",
@@ -418,7 +418,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     },
     {
       "name": "authenticateInvalidClaims",
@@ -428,7 +428,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 1
     }
   ]
 }
